@@ -34,7 +34,14 @@
     }
   }
   &__factory {
-    background-color: var(--main-blue);
+    background-color: rgba(67, 82, 128, 0.8);
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: transform 1s ease-in-out;
+    &-active {
+      opacity: 1;
+      transform: translateX(0);
+    }
     div {
       padding: 40px 20px;
       p {

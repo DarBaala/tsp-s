@@ -60,3 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+const scrollAnimation = document.querySelector(".about-us__factory");
+const scrollAnimationOffset =
+  scrollAnimation.offsetTop -
+  window.innerHeight +
+  scrollAnimation.offsetHeight / 1;
+
+const handleScroll = () => {
+  if (window.pageYOffset > scrollAnimationOffset) {
+    scrollAnimation.classList.add("about-us__factory-active");
+  }
+};
+
+console.log(scrollAnimationOffset, scrollAnimation);
+
+window.addEventListener("scroll", handleScroll);

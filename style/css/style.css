@@ -342,7 +342,7 @@ p {
       right: 0;
       opacity: 0;
       visibility: hidden;
-      padding: 16px 0 0;
+      padding: 20px 0 5px;
       transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
       .header__bottom-dropdown-active {
         visibility: visible;
@@ -369,7 +369,7 @@ p {
             color: #fff !important;
             font-size: 14px; }
             .header__bottom-dropdown-blocks ul a:hover {
-              color: var(--main-orange) !important; }
+              color: #cacaca !important; }
     .header__bottom a {
       transition: all 0.3s ease-in-out;
       font-style: normal;
@@ -506,7 +506,9 @@ p {
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
-      color: #ffffff; }
+      color: #fff; }
+      .footer__items a:hover {
+        color: #cacaca; }
 
 .directions {
   display: block;
@@ -607,7 +609,13 @@ p {
           width: 360px;
           height: 140px; } }
   .about-us__factory {
-    background-color: var(--main-blue); }
+    background-color: rgba(67, 82, 128, 0.8);
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: transform 1s ease-in-out; }
+    .about-us__factory-active {
+      opacity: 1;
+      transform: translateX(0); }
     .about-us__factory div {
       padding: 40px 20px; }
       .about-us__factory div p {
@@ -690,7 +698,7 @@ p {
 .card-hover {
   position: relative;
   width: 340px;
-  height: 380px;
+  height: 340px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
@@ -730,8 +738,8 @@ p {
     transition: all 0.3s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97); }
   .card-hover:hover .card-hover__digit {
     font-size: 38px;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     background-color: rgba(67, 82, 128, 0.726);
     mix-blend-mode: normal;
     backdrop-filter: blur(10px);
@@ -808,6 +816,61 @@ p {
     z-index: -1;
     transform: scale(1.2);
     transition: 0.35s 0.35s transform cubic-bezier(0.1, 0.72, 0.4, 0.97); }
+
+.contacts {
+  padding: 30px 20px 0; }
+  @media (max-width: 960px) {
+    .contacts {
+      margin-top: 112px; } }
+  .contacts h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--main-blue);
+    font-style: normal;
+    margin-bottom: 40px; }
+  .contacts__items {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; }
+    @media (max-width: 960px) {
+      .contacts__items {
+        flex-direction: column;
+        align-items: flex-start; } }
+    .contacts__items div {
+      margin-right: 50px; }
+      .contacts__items div:last-child {
+        margin-right: 0; }
+      @media (max-width: 960px) {
+        .contacts__items div {
+          margin-right: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 20px; }
+          .contacts__items div:last-child {
+            margin-bottom: 0; } }
+    .contacts__items h3 {
+      margin-bottom: 10px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #435280; }
+      @media (max-width: 960px) {
+        .contacts__items h3 {
+          margin-bottom: 8px; } }
+    .contacts__items a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000; }
+
+#map {
+  width: 100%;
+  height: 600px; }
+  @media (max-width: 960px) {
+    #map {
+      height: 300px; } }
 
 html {
   box-sizing: border-box; }
