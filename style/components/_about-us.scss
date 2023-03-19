@@ -1,0 +1,133 @@
+.about-us {
+  padding: 35px 10px;
+  &__description {
+    margin-bottom: 35px;
+    h2 {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--main-blue);
+      font-style: normal;
+      margin-bottom: 30px;
+    }
+    p {
+      max-width: 1120px;
+      font-size: 18px;
+      span {
+        color: var(--main-orange);
+      }
+    }
+    img {
+      object-fit: contain;
+      width: 1120px;
+      height: 415px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      @media (max-width: 1150px) {
+        width: 940px;
+        height: 346px;
+      }
+      @media (max-width: 960px) {
+        width: 360px;
+        height: 140px;
+      }
+    }
+  }
+  &__factory {
+    background-color: var(--main-blue);
+    div {
+      padding: 40px 0;
+      p {
+        font-style: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+      }
+      ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        li {
+          text-indent: 20px;
+          font-style: normal;
+          font-size: 16px;
+          line-height: 19px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  &__facts {
+    h2 {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--main-blue);
+      font-style: normal;
+      margin-bottom: 30px;
+    }
+  }
+  &__blocks {
+    margin-right: 30px;
+    &:first-child {
+      div {
+        &:hover {
+          transform: translateX(3%);
+        }
+      }
+    }
+    &:last-child {
+      div {
+        &:hover {
+          transform: translateX(-3%);
+          @media (max-width: 960px) {
+            transform: translateX(3%);
+          }
+        }
+      }
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      width: 340px;
+      height: 80px;
+      background-color: var(--main-blue);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      @media (max-width: 960px) {
+        width: 255px;
+        height: 75px;
+      }
+      h3 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        color: #ffffff;
+        p {
+          margin-top: 8px;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          color: #ffffff;
+          @media (max-width: 960px) {
+            font-size: 12px;
+            line-height: 14px;
+          }
+        }
+      }
+      img {
+        width: 85px;
+        height: 60px;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    flex-wrap: wrap;
+  }
+}
