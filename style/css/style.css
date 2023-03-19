@@ -422,7 +422,11 @@ p {
     left: 5%;
     background: rgba(67, 82, 128, 0.5);
     mix-blend-mode: normal;
-    backdrop-filter: blur(10px); }
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out; }
+    .video__banner:hover {
+      transform: scale(1.1);
+      cursor: pointer; }
     @media (max-width: 960px) {
       .video__banner {
         padding: 10px;
@@ -513,6 +517,9 @@ p {
 .directions {
   display: block;
   padding: 60px 10px; }
+  @media (max-width: 960px) {
+    .directions {
+      padding: 30px 10px; } }
   .directions__description {
     display: flex;
     justify-content: center;

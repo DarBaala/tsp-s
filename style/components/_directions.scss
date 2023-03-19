@@ -1,6 +1,9 @@
 .directions {
   display: block;
   padding: 60px 10px;
+  @media (max-width: 960px) {
+    padding: 30px 10px;
+  }
   &__description {
     display: flex;
     justify-content: center;

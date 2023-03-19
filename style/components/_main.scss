@@ -37,6 +37,11 @@
     background: rgba(67, 82, 128, 0.5);
     mix-blend-mode: normal;
     backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
     @media (max-width: 960px) {
       padding: 10px;
       left: 0;
