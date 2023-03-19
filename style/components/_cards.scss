@@ -23,41 +23,50 @@
       transition: transform 0.35s;
     }
   }
-
-  p {
+  &__digit {
     z-index: 22;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
+    height: 50px;
     color: #fff;
-    font-size: 20px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
     position: absolute;
     right: 0;
-    left: 0;
+    width: 50px;
     top: 0;
     background-color: var(--main-orange);
+    transition: background-color 0.3s ease-in-out;
   }
 
   &:hover {
     #{$root} {
       &__content {
         background-color: var(--main-orange);
-        bottom: 94%;
+        bottom: 100%;
         transform: translateY(100%);
         padding: 20px 0;
         transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
       }
-
       &__link {
         opacity: 1;
         transform: translate(-50%, 0);
         transition: all 0.3s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
       }
     }
-
+    .card-hover__digit {
+      font-size: 38px;
+      height: 100px;
+      width: 100px;
+      background-color: rgba(67, 82, 128, 0.726);
+      mix-blend-mode: normal;
+      backdrop-filter: blur(10px);
+      transition: background-color 0.3s ease-in-out;
+      top: auto;
+      bottom: 0;
+    }
     img {
       transform: scale(1);
       transition: 0.35s 0.1s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);

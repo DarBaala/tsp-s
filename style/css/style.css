@@ -337,19 +337,21 @@ p {
       display: flex;
       flex-direction: column;
       text-align: center;
-      padding: 35px;
       position: absolute;
       left: 0;
       right: 0;
       opacity: 0;
       visibility: hidden;
-      background-color: #fff;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-      border-bottom: 5px solid var(--main-orange); }
+      padding: 16px 0 0;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
       .header__bottom-dropdown-active {
         visibility: visible;
         opacity: 1; }
       .header__bottom-dropdown-blocks {
+        background-color: rgba(67, 82, 128, 0.9);
+        mix-blend-mode: normal;
+        backdrop-filter: blur(10px);
+        padding: 20px 20px 0px;
         display: flex;
         align-items: flex-start;
         justify-content: center; }
@@ -364,7 +366,7 @@ p {
           .header__bottom-dropdown-blocks ul li {
             margin-bottom: 10px; }
           .header__bottom-dropdown-blocks ul a {
-            color: var(--main-blue) !important;
+            color: #fff !important;
             font-size: 14px; }
             .header__bottom-dropdown-blocks ul a:hover {
               color: var(--main-orange) !important; }
@@ -700,24 +702,25 @@ p {
   .card-hover:has(.card-hover__link:hover) .card-hover__extra {
     transform: translateY(0);
     transition: transform 0.35s; }
-  .card-hover p {
+  .card-hover__digit {
     z-index: 22;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
+    height: 50px;
     color: #fff;
-    font-size: 20px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
     position: absolute;
     right: 0;
-    left: 0;
+    width: 50px;
     top: 0;
-    background-color: var(--main-orange); }
+    background-color: var(--main-orange);
+    transition: background-color 0.3s ease-in-out; }
   .card-hover:hover .card-hover__content {
     background-color: var(--main-orange);
-    bottom: 94%;
+    bottom: 100%;
     transform: translateY(100%);
     padding: 20px 0;
     transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97); }
@@ -725,6 +728,16 @@ p {
     opacity: 1;
     transform: translate(-50%, 0);
     transition: all 0.3s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97); }
+  .card-hover:hover .card-hover__digit {
+    font-size: 38px;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(67, 82, 128, 0.726);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease-in-out;
+    top: auto;
+    bottom: 0; }
   .card-hover:hover img {
     transform: scale(1);
     transition: 0.35s 0.1s transform cubic-bezier(0.1, 0.72, 0.4, 0.97); }
