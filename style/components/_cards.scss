@@ -2,14 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .card-hover {
+  position: relative;
   $root: &;
-  width: 360px;
-  height: 400px;
+  width: 340px;
+  height: 380px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+  margin: 20px;
+  @media (max-width: 960px) {
+    margin: 20px 0;
+  }
   cursor: pointer;
   &:has(#{$root}__link:hover) {
     #{$root}__extra {
@@ -18,11 +24,28 @@
     }
   }
 
+  p {
+    z-index: 22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: var(--main-orange);
+  }
+
   &:hover {
     #{$root} {
       &__content {
         background-color: var(--main-orange);
-        bottom: 100%;
+        bottom: 94%;
         transform: translateY(100%);
         padding: 20px 0;
         transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
@@ -80,7 +103,7 @@
     flex-wrap: wrap;
     align-items: center;
     text-decoration: none;
-    color: #331f10;
+    color: #eebc99;
     opacity: 0;
     padding: 10px;
     transition: all 0.35s;
@@ -98,9 +121,13 @@
     }
   }
   &__title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 10px;
     color: #fff;
     padding: 0 10px;
   }
