@@ -272,7 +272,7 @@
   &__breadcrumb {
     background-color: #e9ecef;
     @media (max-width: 960px) {
-      margin-top: 30px;
+      margin-top: 110px;
     }
     &-wrapper {
       display: flex;
@@ -295,6 +295,12 @@
           font-size: 16px;
           line-height: 19px;
           color: $blue;
+        }
+        @media (max-width: 960px) {
+          font-size: 14px;
+          a {
+            font-size: 14px;
+          }
         }
       }
     }
