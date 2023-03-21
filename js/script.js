@@ -64,7 +64,7 @@ const scrollAnimation = document.querySelector(".about-us__factory");
 const scrollAnimationOffset =
   scrollAnimation.offsetTop -
   window.innerHeight +
-  scrollAnimation.offsetHeight / 1;
+  scrollAnimation.offsetHeight / 2;
 
 const handleScroll = () => {
   if (window.pageYOffset > scrollAnimationOffset) {

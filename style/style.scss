@@ -43,11 +43,7 @@
   font-display: swap;
 }
 
-:root {
-  --main-blue: #435280;
-  --main-orange: #e2752b;
-}
-
+@import "./variables";
 @import "./libs/reset";
 @import "./components/all";
 

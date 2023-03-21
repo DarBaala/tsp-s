@@ -6,7 +6,7 @@
     h2 {
       font-size: 34px;
       font-weight: 700;
-      color: var(--main-blue);
+      color: $blue;
       font-style: normal;
       margin-bottom: 30px;
     }
@@ -14,7 +14,7 @@
       max-width: 1120px;
       font-size: 18px;
       span {
-        color: var(--main-orange);
+        color: $orange;
       }
     }
     img {
@@ -36,7 +36,7 @@
   &__factory {
     background-color: rgba(67, 82, 128, 0.8);
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-80%);
     transition: transform 1s ease-in-out;
     &-active {
       opacity: 1;
@@ -67,7 +67,7 @@
     h2 {
       font-size: 34px;
       font-weight: 700;
-      color: var(--main-blue);
+      color: $blue;
       font-style: normal;
       margin-bottom: 30px;
     }
@@ -98,7 +98,7 @@
       padding: 20px;
       width: 340px;
       height: 80px;
-      background-color: var(--main-blue);
+      background-color: $blue;
       margin-bottom: 30px;
       transition: transform 0.3s ease-in-out;
       cursor: pointer;

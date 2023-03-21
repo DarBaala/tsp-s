@@ -33,10 +33,6 @@
   font-style: normal;
   font-display: swap; }
 
-:root {
-  --main-blue: #435280;
-  --main-orange: #e2752b; }
-
 html,
 body,
 div,
@@ -186,8 +182,8 @@ p {
       margin-bottom: 10px; }
       .header__hidden-menu li a {
         font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 16px;
+        line-height: 20px;
         color: #ffffff; }
     .header__hidden-menu-active {
       display: flex; }
@@ -332,7 +328,20 @@ p {
       cursor: pointer;
       transition: all 0.3s ease-in-out; }
       .header__bottom-li:hover a {
+        transition: color 0.3s ease-in-out;
         color: #e2752b; }
+        .header__bottom-li:hover a svg {
+          transition: fill 0.3s ease-in-out;
+          fill: #e2752b; }
+      .header__bottom-li a {
+        display: flex;
+        align-items: center; }
+        .header__bottom-li a svg {
+          margin-left: 9px;
+          margin-bottom: 2px;
+          width: 10px;
+          height: 10px;
+          fill: #435280; }
     .header__bottom-dropdown {
       display: flex;
       flex-direction: column;
@@ -351,7 +360,7 @@ p {
         background-color: rgba(67, 82, 128, 0.9);
         mix-blend-mode: normal;
         backdrop-filter: blur(10px);
-        padding: 20px 20px 0px;
+        padding: 20px 20px 5px;
         display: flex;
         align-items: flex-start;
         justify-content: center; }
@@ -384,6 +393,28 @@ p {
     @media (max-width: 960px) {
       .header__logo {
         width: 260px; } }
+  .header__breadcrumb {
+    background-color: #e9ecef; }
+    @media (max-width: 960px) {
+      .header__breadcrumb {
+        margin-top: 30px; } }
+    .header__breadcrumb-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 10px; }
+      .header__breadcrumb-wrapper li {
+        color: #6c757d; }
+        .header__breadcrumb-wrapper li::after {
+          color: #6c757d;
+          content: "/";
+          padding: 0 10px; }
+        .header__breadcrumb-wrapper li:last-child::after {
+          content: ""; }
+        .header__breadcrumb-wrapper li a {
+          font-style: normal;
+          font-size: 16px;
+          line-height: 19px;
+          color: #435280; }
 
 #navbar {
   background-color: #fff; }
@@ -471,7 +502,7 @@ p {
       max-width: 100%; } }
 
 .footer {
-  background-color: var(--main-blue);
+  background-color: #435280;
   padding: 80px 20px; }
   .footer__wrapper {
     display: flex;
@@ -505,12 +536,13 @@ p {
     .footer__items li {
       margin-bottom: 20px; }
     .footer__items a {
-      line-height: 125%;
+      line-height: 100%;
       list-style: none;
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
-      color: #fff; }
+      font-size: 14px;
+      color: #fff;
+      max-width: 260px; }
       .footer__items a:hover {
         color: #cacaca; }
 
@@ -531,7 +563,7 @@ p {
       text-align: center;
       font-size: 34px;
       font-weight: 700;
-      color: var(--main-blue);
+      color: #435280;
       font-style: normal;
       margin-bottom: 10px; }
     .directions__description p {
@@ -540,7 +572,7 @@ p {
       text-align: center; }
       .directions__description p span {
         font-weight: 600;
-        color: var(--main-orange); }
+        color: #e2752b; }
   .directions__blocks {
     display: flex;
     align-items: center;
@@ -555,7 +587,7 @@ p {
     margin: 25px;
     cursor: pointer;
     transition: box-shadow 0.3s, transform 0.3s ease-in-out;
-    background-color: var(--main-blue); }
+    background-color: #435280; }
     .directions__items:hover {
       transform: scale(1.05);
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -593,14 +625,14 @@ p {
     .about-us__description h2 {
       font-size: 34px;
       font-weight: 700;
-      color: var(--main-blue);
+      color: #435280;
       font-style: normal;
       margin-bottom: 30px; }
     .about-us__description p {
       max-width: 1120px;
       font-size: 18px; }
       .about-us__description p span {
-        color: var(--main-orange); }
+        color: #e2752b; }
     .about-us__description img {
       object-fit: contain;
       width: 1120px;
@@ -618,7 +650,7 @@ p {
   .about-us__factory {
     background-color: rgba(67, 82, 128, 0.8);
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-80%);
     transition: transform 1s ease-in-out; }
     .about-us__factory-active {
       opacity: 1;
@@ -642,7 +674,7 @@ p {
   .about-us__facts h2 {
     font-size: 34px;
     font-weight: 700;
-    color: var(--main-blue);
+    color: #435280;
     font-style: normal;
     margin-bottom: 30px; }
   .about-us__blocks {
@@ -661,7 +693,7 @@ p {
       padding: 20px;
       width: 340px;
       height: 80px;
-      background-color: var(--main-blue);
+      background-color: #435280;
       margin-bottom: 30px;
       transition: transform 0.3s ease-in-out;
       cursor: pointer; }
@@ -731,10 +763,10 @@ p {
     right: 0;
     width: 50px;
     top: 0;
-    background-color: var(--main-orange);
+    background-color: #e2752b;
     transition: background-color 0.3s ease-in-out; }
   .card-hover:hover .card-hover__content {
-    background-color: var(--main-orange);
+    background-color: #e2752b;
     bottom: 100%;
     transform: translateY(100%);
     padding: 20px 0;
@@ -759,7 +791,7 @@ p {
   .card-hover__content {
     width: 100%;
     text-align: center;
-    background-color: var(--main-blue);
+    background-color: #435280;
     padding: 20px 0;
     position: absolute;
     bottom: 0;
@@ -832,7 +864,7 @@ p {
   .contacts h2 {
     font-size: 34px;
     font-weight: 700;
-    color: var(--main-blue);
+    color: #435280;
     font-style: normal;
     margin-bottom: 40px; }
   .contacts__items {
@@ -878,6 +910,88 @@ p {
   @media (max-width: 960px) {
     #map {
       height: 300px; } }
+
+.products {
+  padding: 50px 20px; }
+  @media (max-width: 960px) {
+    .products {
+      margin-top: 112px !important;
+      padding: 0 20px; } }
+  .products h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #435280;
+    font-style: normal;
+    margin-bottom: 20px; }
+  .products__wrapper {
+    display: flex;
+    flex-wrap: wrap; }
+  .products__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 50px;
+    max-width: 670px; }
+    .products__items button {
+      cursor: pointer;
+      border-radius: 10px;
+      background-color: #e2752b;
+      border: none;
+      margin-top: 10px;
+      padding: 20px;
+      width: 100%;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      transition: background-color 0.3s ease-in-out; }
+      .products__items button:hover {
+        background-color: rgba(226, 116, 43, 0.8); }
+  .products__description {
+    margin-bottom: 15px; }
+    .products__description h3 {
+      margin-bottom: 15px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #e2752b; }
+      @media (max-width: 960px) {
+        .products__description h3 {
+          margin-bottom: 10px; } }
+    .products__description p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000;
+      margin-bottom: 10px; }
+      .products__description p:last-child {
+        margin-bottom: 0; }
+      @media (max-width: 960px) {
+        .products__description p {
+          margin-bottom: 8px; } }
+    .products__description span {
+      color: #e2752b; }
+  .products__image {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #435280;
+    width: 100%; }
+    .products__image img {
+      object-fit: contain;
+      padding: 30px;
+      width: 350px;
+      height: 370px;
+      cursor: pointer;
+      transition: transform 0.3s ease; }
+      .products__image img:hover {
+        transform: scale(1.1); }
+      @media (max-width: 960px) {
+        .products__image img {
+          width: 280px;
+          height: 250px; } }
 
 html {
   box-sizing: border-box; }

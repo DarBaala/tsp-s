@@ -37,14 +37,14 @@
     right: 0;
     width: 50px;
     top: 0;
-    background-color: var(--main-orange);
+    background-color: $orange;
     transition: background-color 0.3s ease-in-out;
   }
 
   &:hover {
     #{$root} {
       &__content {
-        background-color: var(--main-orange);
+        background-color: $orange;
         bottom: 100%;
         transform: translateY(100%);
         padding: 20px 0;
@@ -76,7 +76,7 @@
   &__content {
     width: 100%;
     text-align: center;
-    background-color: var(--main-blue);
+    background-color: $blue;
     padding: 20px 0;
     position: absolute;
     bottom: 0;
