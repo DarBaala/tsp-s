@@ -460,9 +460,6 @@ p {
     mix-blend-mode: normal;
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease-in-out; }
-    .video__banner:hover {
-      transform: scale(1.1);
-      cursor: pointer; }
     @media (max-width: 960px) {
       .video__banner {
         padding: 10px;
@@ -973,6 +970,8 @@ p {
     margin-bottom: 50px;
     max-width: 830px;
     padding: 0 10px; }
+    .products__items a {
+      width: 100%; }
     .products__items button {
       cursor: pointer;
       border-radius: 10px;
@@ -1117,6 +1116,127 @@ p {
           .products__image-boilers img {
             width: 280px;
             height: 250px; } }
+
+.services {
+  padding: 50px 20px; }
+  @media (max-width: 960px) {
+    .services {
+      margin-top: 25px !important;
+      padding: 0 20px 20px; } }
+  .services h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #435280;
+    font-style: normal;
+    margin-bottom: 20px; }
+    @media (max-width: 960px) {
+      .services h2 {
+        font-size: 24px; } }
+  .services__description h3 {
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #e2752b; }
+    @media (max-width: 960px) {
+      .services__description h3 {
+        margin-bottom: 10px; } }
+    .services__description h3 span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000; }
+  .services__description p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    margin-bottom: 10px; }
+    .services__description p:last-child {
+      margin-bottom: 0; }
+    @media (max-width: 960px) {
+      .services__description p {
+        margin-bottom: 8px; } }
+  .services__description span {
+    color: #e2752b; }
+
+.boilers {
+  padding: 50px 20px; }
+  @media (max-width: 960px) {
+    .boilers {
+      margin-top: 25px !important;
+      padding: 0 20px 20px; } }
+  .boilers h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #435280;
+    font-style: normal;
+    margin-bottom: 20px; }
+    @media (max-width: 960px) {
+      .boilers h2 {
+        font-size: 24px; } }
+  .boilers__description h3 {
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #e2752b; }
+    @media (max-width: 960px) {
+      .boilers__description h3 {
+        margin-bottom: 10px; } }
+    .boilers__description h3 span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000; }
+  .boilers__description p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    margin-bottom: 10px; }
+    .boilers__description p:last-child {
+      margin-bottom: 0; }
+    @media (max-width: 960px) {
+      .boilers__description p {
+        margin-bottom: 8px; } }
+  .boilers__description span {
+    color: #e2752b; }
+  .boilers__schema {
+    display: flex;
+    align-items: center; }
+    .boilers__schema p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000;
+      margin-bottom: 10px; }
+      .boilers__schema p:last-child {
+        margin-bottom: 0; }
+      @media (max-width: 960px) {
+        .boilers__schema p {
+          margin-bottom: 8px; } }
+    .boilers__schema img {
+      width: 450px;
+      max-width: 100%;
+      object-fit: contain;
+      margin-right: 30px; }
+      @media (max-width: 960px) {
+        .boilers__schema img {
+          width: 100%;
+          margin-right: 0; } }
+    @media (max-width: 960px) {
+      .boilers__schema {
+        flex-direction: column; }
+        .boilers__schema img {
+          margin-bottom: 20px; } }
 
 html {
   box-sizing: border-box; }
