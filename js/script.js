@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar = document.getElementById("navbar"),
     mobileNav = document.getElementById("header__hidden-menu"),
     headerLi = document.querySelectorAll(".header__bottom-li"),
-    headerExtra = document.querySelector(".header__hidden-menu-extra");
+    headerExtra = document.querySelectorAll(".header__hidden-menu-extra");
 
   headerLi.forEach((el) => {
     el.addEventListener("mouseover", (e) => {
@@ -62,14 +62,21 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   console.log(headerExtra);
 
-  const handleExtraMenu = () => {
-    console.log(666);
-    headerExtra
-      .querySelector(".header__hidden-menu-extra-wrapper")
-      .classList.toggle("header__hidden-menu-extra-wrapper-active");
-  };
+  // const handleExtraMenu = () => {
+  //   console.log(666);
+  //   headerExtra
+  //     .querySelector(".header__hidden-menu-extra-wrapper")
+  //     .classList.toggle("header__hidden-menu-extra-wrapper-active");
+  // };
 
-  headerExtra.addEventListener("click", handleExtraMenu);
+  headerExtra.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      let currentLi = e.currentTarget;
+      currentLi
+        .querySelector(".header__hidden-menu-extra-wrapper")
+        .classList.toggle("header__hidden-menu-extra-wrapper-active");
+    });
+  });
 });
 const scrollAnimation = document.querySelector(".about-us__factory");
 const scrollAnimationOffset =
