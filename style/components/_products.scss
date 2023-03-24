@@ -53,16 +53,16 @@
     }
   }
   &__description {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     h3 {
-      margin-bottom: 15px;
+      margin-top: 10px;
+      margin-bottom: 5px;
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
       line-height: 28px;
       color: $orange;
       @media (max-width: 960px) {
-        margin-bottom: 10px;
       }
     }
     p {

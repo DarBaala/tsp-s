@@ -277,6 +277,7 @@
     &-wrapper {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       padding: 10px;
       li {
         color: #6c757d;

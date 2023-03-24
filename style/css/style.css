@@ -401,6 +401,7 @@ p {
     .header__breadcrumb-wrapper {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       padding: 10px; }
       .header__breadcrumb-wrapper li {
         color: #6c757d; }
@@ -996,17 +997,15 @@ p {
         .products__items-houses {
           flex-direction: column; } }
   .products__description {
-    margin-bottom: 15px; }
+    margin-bottom: 10px; }
     .products__description h3 {
-      margin-bottom: 15px;
+      margin-top: 10px;
+      margin-bottom: 5px;
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
       line-height: 28px;
       color: #e2752b; }
-      @media (max-width: 960px) {
-        .products__description h3 {
-          margin-bottom: 10px; } }
     .products__description p {
       font-style: normal;
       font-weight: 400;
