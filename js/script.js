@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger"),
     navbar = document.getElementById("navbar"),
     mobileNav = document.getElementById("header__hidden-menu"),
-    headerLi = document.querySelectorAll(".header__bottom-li");
+    headerLi = document.querySelectorAll(".header__bottom-li"),
+    headerExtra = document.querySelector(".header__hidden-menu-extra");
 
   headerLi.forEach((el) => {
     el.addEventListener("mouseover", (e) => {
@@ -52,19 +53,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sticky = navbar.offsetTop;
 
-  function scrollingOn() {
+  const scrollingOn = () => {
     if (window.pageYOffset >= sticky) {
       navbar.classList.add("header__bottom-sticky");
     } else {
       navbar.classList.remove("header__bottom-sticky");
     }
-  }
+  };
+  console.log(headerExtra);
+
+  const handleExtraMenu = () => {
+    console.log(666);
+    headerExtra
+      .querySelector(".header__hidden-menu-extra-wrapper")
+      .classList.toggle("header__hidden-menu-extra-wrapper-active");
+  };
+
+  headerExtra.addEventListener("click", handleExtraMenu);
 });
 const scrollAnimation = document.querySelector(".about-us__factory");
 const scrollAnimationOffset =
-  scrollAnimation.offsetTop -
-  window.innerHeight +
-  scrollAnimation.offsetHeight / 2;
+  scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
 
 const handleScroll = () => {
   if (window.pageYOffset > scrollAnimationOffset) {

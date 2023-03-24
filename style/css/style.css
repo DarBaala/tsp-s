@@ -177,7 +177,8 @@ p {
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 0; }
+    padding: 20px 0 0;
+    height: 100rem; }
     .header__hidden-menu li {
       margin-bottom: 10px; }
       .header__hidden-menu li a {
@@ -185,6 +186,34 @@ p {
         font-size: 16px;
         line-height: 20px;
         color: #ffffff; }
+        .header__hidden-menu li a svg {
+          width: 10px;
+          height: 10px;
+          fill: #fff; }
+      .header__hidden-menu li ul li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        text-align: center; }
+        .header__hidden-menu li ul li:last-child {
+          margin-bottom: 0; }
+    .header__hidden-menu-extra {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .header__hidden-menu-extra-wrapper {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: none;
+      padding: 12px; }
+      .header__hidden-menu-extra-wrapper li {
+        margin-bottom: 5px; }
+        .header__hidden-menu-extra-wrapper li a {
+          font-size: 14px; }
+      .header__hidden-menu-extra-wrapper-active {
+        display: flex; }
     .header__hidden-menu-active {
       display: flex; }
   .header__burger {
