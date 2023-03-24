@@ -60,18 +60,17 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.remove("header__bottom-sticky");
     }
   };
-  console.log(headerExtra);
-
-  // const handleExtraMenu = () => {
-  //   console.log(666);
-  //   headerExtra
-  //     .querySelector(".header__hidden-menu-extra-wrapper")
-  //     .classList.toggle("header__hidden-menu-extra-wrapper-active");
-  // };
 
   headerExtra.forEach((el) => {
     el.addEventListener("click", (e) => {
       let currentLi = e.currentTarget;
+      headerExtra.forEach((el) => {
+        if (currentLi !== el) {
+          el.querySelector(".header__hidden-menu-extra-wrapper").classList.remove(
+            "header__hidden-menu-extra-wrapper-active"
+          );
+        }
+      });
       currentLi
         .querySelector(".header__hidden-menu-extra-wrapper")
         .classList.toggle("header__hidden-menu-extra-wrapper-active");
