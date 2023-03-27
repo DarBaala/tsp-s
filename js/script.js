@@ -81,78 +81,79 @@ document.addEventListener("DOMContentLoaded", () => {
         .classList.toggle("header__hidden-menu-extra-wrapper-active");
     });
   });
-});
-const scrollAnimation = document.querySelector(".about-us__factory");
-const scrollAnimationOffset =
-  scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
 
-const handleScroll = () => {
-  if (window.pageYOffset > scrollAnimationOffset) {
-    scrollAnimation.classList.add("about-us__factory-active");
-  }
-};
+  const scrollAnimation = document.querySelector(".about-us__factory");
+  const scrollAnimationOffset =
+    scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
 
-console.log(scrollAnimationOffset, scrollAnimation);
+  const handleScroll = () => {
+    if (window.pageYOffset > scrollAnimationOffset) {
+      scrollAnimation.classList.add("about-us__factory-active");
+    }
+  };
 
-window.addEventListener("scroll", handleScroll);
+  console.log(scrollAnimationOffset, scrollAnimation);
 
-const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
-console.log(arrLi);
+  window.addEventListener("scroll", handleScroll);
 
-arrLi.forEach((el) => {
-  el.addEventListener("mouseenter", (e) => {
-    let currentLi = e.currentTarget;
-    let p = currentLi.querySelector("p");
-    let span = currentLi.querySelector("span");
-    console.log(p, span);
-    anime({
-      targets: currentLi,
-      p,
-      translateX: 50,
-    });
-    const div = document.querySelector(".video__drop-block");
-    setTimeout(() => {
-      anime({
-        targets: div,
-        translateX: +20,
-      });
-    }, 400);
-    // setTimeout(() => {
-    //   if (document.querySelector(".video__wrapper").querySelector(".video__drop-block")) {
-    //     const div = document.querySelector(".video__drop-block");
-    //     div.remove();
-    //     const wrapper = document.createElement("div");
-    //     wrapper.classList.add("video__drop-block");
-    //     const myDiv = document.querySelector(".video__wrapper");
-    //     myDiv.appendChild(wrapper);
-    //   } else {
-    //     const wrapper = document.createElement("div");
-    //     wrapper.classList.add("video__drop-block");
-    //     const myDiv = document.querySelector(".video__wrapper");
-    //     myDiv.appendChild(wrapper);
-    //   }
-    // }, 300);
-    // const elementPi = currentLi.parentNode.appendChild(document.createElement("p"));
-    // elementPi.textContent = "lfqllfweew";
-  });
-});
+  const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
+  console.log(arrLi);
 
-arrLi.forEach((el) => {
-  el.addEventListener("mouseleave", (e) => {
-    let currentLi = e.currentTarget;
-    let p = currentLi.querySelector("p");
-    const div = document.querySelector(".video__drop-block");
-
-    setTimeout(() => {
+  arrLi.forEach((el) => {
+    el.addEventListener("mouseenter", (e) => {
+      let currentLi = e.currentTarget;
+      let p = currentLi.querySelector("p");
+      let span = currentLi.querySelector("span");
+      console.log(p, span);
       anime({
         targets: currentLi,
         p,
-        translateX: 0,
+        translateX: 50,
       });
-      anime({
-        targets: div,
-        translateX: 0,
-      });
-    }, 200);
+      const div = document.querySelector(".video__drop-block");
+      setTimeout(() => {
+        anime({
+          targets: div,
+          translateX: +20,
+        });
+      }, 400);
+      // setTimeout(() => {
+      //   if (document.querySelector(".video__wrapper").querySelector(".video__drop-block")) {
+      //     const div = document.querySelector(".video__drop-block");
+      //     div.remove();
+      //     const wrapper = document.createElement("div");
+      //     wrapper.classList.add("video__drop-block");
+      //     const myDiv = document.querySelector(".video__wrapper");
+      //     myDiv.appendChild(wrapper);
+      //   } else {
+      //     const wrapper = document.createElement("div");
+      //     wrapper.classList.add("video__drop-block");
+      //     const myDiv = document.querySelector(".video__wrapper");
+      //     myDiv.appendChild(wrapper);
+      //   }
+      // }, 300);
+      // const elementPi = currentLi.parentNode.appendChild(document.createElement("p"));
+      // elementPi.textContent = "lfqllfweew";
+    });
+  });
+
+  arrLi.forEach((el) => {
+    el.addEventListener("mouseleave", (e) => {
+      let currentLi = e.currentTarget;
+      let p = currentLi.querySelector("p");
+      const div = document.querySelector(".video__drop-block");
+
+      setTimeout(() => {
+        anime({
+          targets: currentLi,
+          p,
+          translateX: 0,
+        });
+        anime({
+          targets: div,
+          translateX: 0,
+        });
+      }, 200);
+    });
   });
 });
