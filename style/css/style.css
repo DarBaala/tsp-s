@@ -504,11 +504,12 @@ p {
       .video__banner li:hover {
         background-color: rgba(226, 117, 43, 0.9); }
         .video__banner li:hover p {
-          transform: translateX(300px); }
+          transform: translateX(300px);
+          color: #435280; }
         .video__banner li:hover span {
           transform: translateX(-100px); }
       .video__banner li p {
-        font-size: 80px;
+        font-size: 90px;
         font-weight: 600;
         margin-right: 40px;
         margin-left: 40px;

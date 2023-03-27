@@ -53,16 +53,18 @@
         background-color: rgba(226, 117, 43, 0.9);
         p {
           transform: translateX(300px);
+          color: $blue;
         }
         span {
           transform: translateX(-100px);
         }
       }
       p {
-        font-size: 80px;
+        font-size: 90px;
         font-weight: 600;
         margin-right: 40px;
         margin-left: 40px;
+
         transition: transform 0.5s ease-in-out;
       }
       span {
