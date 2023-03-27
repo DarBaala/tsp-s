@@ -101,10 +101,32 @@ window.addEventListener("scroll", handleScroll);
 const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
 console.log(arrLi);
 
-
+arrLi.forEach((el) => {
+  el.addEventListener("mouseenter", (e) => {
+    let currentLi = e.currentTarget;
+    let p = currentLi.querySelector("p");
+    let span = currentLi.querySelector("span");
+    console.log(p, span);
+    anime({
+      targets: currentLi,
+      p,
+      translateX: 50,
+    });
+  });
+});
 
 arrLi.forEach((el) => {
-  el.addEventListener("mouseover", (e) => {
+  el.addEventListener("mouseleave", (e) => {
     let currentLi = e.currentTarget;
+    let p = currentLi.querySelector("p");
+    let span = currentLi.querySelector("span");
+    console.log(p, span);
+    setTimeout(() => {
+      anime({
+        targets: currentLi,
+        p,
+        translateX: 0,
+      });
+    }, 300);
   });
 });
