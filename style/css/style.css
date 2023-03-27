@@ -482,56 +482,55 @@ p {
           max-width: 100%;
           max-height: 100%; } }
   .video__banner {
-    padding: 20px;
     position: absolute;
-    top: 10%;
-    left: 5%;
-    background: rgba(67, 82, 128, 0.5);
-    mix-blend-mode: normal;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease-in-out; }
-    @media (max-width: 960px) {
-      .video__banner {
-        padding: 10px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: auto;
-        display: flex;
-        justify-content: center;
-        background: rgba(67, 82, 128, 0.8); } }
-    .video__banner h1 {
-      max-width: 550px;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 34px;
-      line-height: 38px;
+    top: 4%;
+    left: 2%; }
+    .video__banner li {
+      padding: 10px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
-      color: #fff;
+      cursor: pointer;
+      width: 400px;
+      height: 115px;
+      background: rgba(67, 82, 128, 0.8);
+      mix-blend-mode: normal;
+      backdrop-filter: blur(10px);
       margin-bottom: 15px;
-      text-transform: uppercase; }
-      @media (max-width: 960px) {
-        .video__banner h1 {
-          max-width: 700px;
-          font-size: 14px;
-          line-height: 18px;
-          margin-bottom: 0; } }
-    .video__banner p {
-      max-width: 500px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
-      display: flex;
-      align-items: center;
-      color: #ffffff; }
-      @media (max-width: 960px) {
-        .video__banner p {
-          display: none; } }
-  @media (max-width: 1315px) {
-    .video video {
-      max-width: 100%; } }
+      transition: background-color 0.3s ease-in-out;
+      color: #fff; }
+      .video__banner li:last-child {
+        margin-bottom: 0; }
+      .video__banner li:hover {
+        background-color: rgba(226, 117, 43, 0.9); }
+        .video__banner li:hover p {
+          transform: translateX(300px); }
+        .video__banner li:hover span {
+          transform: translateX(-100px); }
+      .video__banner li p {
+        font-size: 80px;
+        font-weight: 600;
+        margin-right: 40px;
+        margin-left: 40px;
+        transition: transform 0.5s ease-in-out; }
+      .video__banner li span {
+        line-height: 120%;
+        text-transform: uppercase;
+        width: 300px;
+        transition: transform 0.5s ease-in-out; }
+      .video__banner li br {
+        content: "A" !important;
+        display: block !important;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.315); }
+  .video video {
+    object-fit: cover;
+    height: 800px;
+    width: 100%; }
+    @media (max-width: 1315px) {
+      .video video {
+        max-width: 100%; } }
 
 .footer {
   background-color: #435280;
@@ -1156,6 +1155,7 @@ p {
   -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2); }
   .card img {
+    padding: 10px;
     width: 100%;
     width: 240px;
     height: 200px;
@@ -1175,6 +1175,7 @@ p {
     .card a:hover {
       background-color: rgba(226, 116, 43, 0.8); }
   .card h5 {
+    font-size: 20px;
     color: #435280; }
 
 .services {
