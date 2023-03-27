@@ -19,15 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       });
-      currentLi
-        .querySelector(".header__bottom-dropdown")
-        .classList.add("header__bottom-dropdown-active");
+      if (currentLi.querySelector(".header__bottom-dropdown")) {
+        currentLi
+          .querySelector(".header__bottom-dropdown")
+          .classList.add("header__bottom-dropdown-active");
+      }
     });
     el.addEventListener("mouseleave", (e) => {
       let currentLi = e.currentTarget;
-      currentLi
-        .querySelector(".header__bottom-dropdown")
-        .classList.remove("header__bottom-dropdown-active");
+      if (currentLi.querySelector(".header__bottom-dropdown")) {
+        currentLi
+          .querySelector(".header__bottom-dropdown")
+          .classList.remove("header__bottom-dropdown-active");
+      }
+
       headerLi.forEach((el) => {
         if (el !== currentLi) {
           if (el.querySelector(".header__bottom-dropdown")) {
@@ -66,9 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
       let currentLi = e.currentTarget;
       headerExtra.forEach((el) => {
         if (currentLi !== el) {
-          el.querySelector(".header__hidden-menu-extra-wrapper").classList.remove(
-            "header__hidden-menu-extra-wrapper-active"
-          );
+          el.querySelector(
+            ".header__hidden-menu-extra-wrapper"
+          ).classList.remove("header__hidden-menu-extra-wrapper-active");
         }
       });
       currentLi
@@ -79,7 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 const scrollAnimation = document.querySelector(".about-us__factory");
 const scrollAnimationOffset =
-  scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
+  scrollAnimation.offsetTop -
+  window.innerHeight +
+  scrollAnimation.offsetHeight / 2;
 
 const handleScroll = () => {
   if (window.pageYOffset > scrollAnimationOffset) {
@@ -90,3 +97,14 @@ const handleScroll = () => {
 console.log(scrollAnimationOffset, scrollAnimation);
 
 window.addEventListener("scroll", handleScroll);
+
+const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
+console.log(arrLi);
+
+
+
+arrLi.forEach((el) => {
+  el.addEventListener("mouseover", (e) => {
+    let currentLi = e.currentTarget;
+  });
+});
