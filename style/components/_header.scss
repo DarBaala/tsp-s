@@ -50,8 +50,12 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      display: none;
       padding: 12px;
+      overflow: hidden;
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
       li {
         margin-bottom: 5px;
         a {
@@ -59,7 +63,8 @@
         }
       }
       &-active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
       }
     }
     &-active {
@@ -313,6 +318,8 @@
   }
   &__breadcrumb {
     background-color: #e9ecef;
+    position: relative;
+    z-index: -2;
     @media (max-width: 960px) {
       margin-top: 110px;
     }
