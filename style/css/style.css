@@ -513,7 +513,7 @@ p {
         font-weight: 600;
         margin-right: 40px;
         margin-left: 40px;
-        transition: transform 0.5s ease-in-out; }
+        transition: color 0.3s ease-in-out, transform 0.5s ease-in-out; }
       .video__banner li span {
         line-height: 120%;
         text-transform: uppercase;

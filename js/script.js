@@ -112,6 +112,8 @@ arrLi.forEach((el) => {
       p,
       translateX: 50,
     });
+    // const elementPi = currentLi.appendChild(document.createElement("div"));
+    // elementPi.textContent = "lfqllfweew";
   });
 });
 
