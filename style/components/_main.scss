@@ -68,6 +68,9 @@
       margin-bottom: 15px;
       transition: background-color 0.3s ease-in-out;
       color: #fff;
+      animation-duration: 0.8s;
+      animation-name: drop-left;
+      animation-direction: alternate;
       &:last-child {
         margin-bottom: 0;
       }
@@ -169,6 +172,14 @@
     transform: translateX(+100%);
   }
 
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes drop-left {
+  from {
+    transform: translateX(-100%);
+  }
   to {
     transform: translateX(0);
   }

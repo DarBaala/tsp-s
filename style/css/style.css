@@ -507,7 +507,10 @@ p {
       backdrop-filter: blur(10px);
       margin-bottom: 15px;
       transition: background-color 0.3s ease-in-out;
-      color: #fff; }
+      color: #fff;
+      animation-duration: 0.8s;
+      animation-name: drop-left;
+      animation-direction: alternate; }
       .video__banner li:last-child {
         margin-bottom: 0; }
       .video__banner li:hover {
@@ -545,6 +548,12 @@ p {
 @keyframes drop-down {
   from {
     transform: translateX(100%); }
+  to {
+    transform: translateX(0); } }
+
+@keyframes drop-left {
+  from {
+    transform: translateX(-100%); }
   to {
     transform: translateX(0); } }
 

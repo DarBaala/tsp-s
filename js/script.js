@@ -153,6 +153,6 @@ arrLi.forEach((el) => {
         targets: div,
         translateX: 0,
       });
-    }, 300);
+    }, 200);
   });
 });
