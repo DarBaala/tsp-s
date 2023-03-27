@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
         currentLi
           .querySelector(".header__bottom-dropdown")
           .classList.add("header__bottom-dropdown-active");
+        let div = currentLi.querySelector(".header__bottom-dropdown-active");
+        anime({
+          targets: div,
+
+          easing: "easeOutElastic(1, .8)",
+          loop: true,
+        });
       }
     });
     el.addEventListener("mouseleave", (e) => {
