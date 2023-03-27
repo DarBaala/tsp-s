@@ -37,7 +37,7 @@
     background-color: rgba(67, 82, 128, 0.8);
     opacity: 0;
     transform: translateX(-80%);
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     &-active {
       opacity: 1;
       transform: translateX(0);

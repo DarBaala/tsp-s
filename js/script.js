@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
       let currentLi = e.currentTarget;
       headerExtra.forEach((el) => {
         if (currentLi !== el) {
-          el.querySelector(
-            ".header__hidden-menu-extra-wrapper"
-          ).classList.remove("header__hidden-menu-extra-wrapper-active");
+          el.querySelector(".header__hidden-menu-extra-wrapper").classList.remove(
+            "header__hidden-menu-extra-wrapper-active"
+          );
         }
       });
       currentLi
@@ -84,9 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 const scrollAnimation = document.querySelector(".about-us__factory");
 const scrollAnimationOffset =
-  scrollAnimation.offsetTop -
-  window.innerHeight +
-  scrollAnimation.offsetHeight / 2;
+  scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
 
 const handleScroll = () => {
   if (window.pageYOffset > scrollAnimationOffset) {
@@ -112,17 +110,28 @@ arrLi.forEach((el) => {
       p,
       translateX: 50,
     });
-    // let wrapper = document.createElement("div");
-    // wrapper.style.position = "absolute";
-    // wrapper.style.right = "0";
-    // wrapper.style.width = "200px";
-    // wrapper.style.height = "200px";
-    // wrapper.style.backgroundColor = "red";
-    // let myDiv = document.querySelector(".video__banner");
-    // myDiv.appendChild(wrapper);
+    const div = document.querySelector(".video__drop-block");
+    setTimeout(() => {
+      anime({
+        targets: div,
+        translateX: +20,
+      });
+    }, 400);
     // setTimeout(() => {
-    //   wrapper.remove();
-    // }, 5000);
+    //   if (document.querySelector(".video__wrapper").querySelector(".video__drop-block")) {
+    //     const div = document.querySelector(".video__drop-block");
+    //     div.remove();
+    //     const wrapper = document.createElement("div");
+    //     wrapper.classList.add("video__drop-block");
+    //     const myDiv = document.querySelector(".video__wrapper");
+    //     myDiv.appendChild(wrapper);
+    //   } else {
+    //     const wrapper = document.createElement("div");
+    //     wrapper.classList.add("video__drop-block");
+    //     const myDiv = document.querySelector(".video__wrapper");
+    //     myDiv.appendChild(wrapper);
+    //   }
+    // }, 300);
     // const elementPi = currentLi.parentNode.appendChild(document.createElement("p"));
     // elementPi.textContent = "lfqllfweew";
   });
@@ -132,12 +141,16 @@ arrLi.forEach((el) => {
   el.addEventListener("mouseleave", (e) => {
     let currentLi = e.currentTarget;
     let p = currentLi.querySelector("p");
-    let span = currentLi.querySelector("span");
-    console.log(p, span);
+    const div = document.querySelector(".video__drop-block");
+
     setTimeout(() => {
       anime({
         targets: currentLi,
         p,
+        translateX: 0,
+      });
+      anime({
+        targets: div,
         translateX: 0,
       });
     }, 300);
