@@ -112,7 +112,18 @@ arrLi.forEach((el) => {
       p,
       translateX: 50,
     });
-    // const elementPi = currentLi.appendChild(document.createElement("div"));
+    // let wrapper = document.createElement("div");
+    // wrapper.style.position = "absolute";
+    // wrapper.style.right = "0";
+    // wrapper.style.width = "200px";
+    // wrapper.style.height = "200px";
+    // wrapper.style.backgroundColor = "red";
+    // let myDiv = document.querySelector(".video__banner");
+    // myDiv.appendChild(wrapper);
+    // setTimeout(() => {
+    //   wrapper.remove();
+    // }, 5000);
+    // const elementPi = currentLi.parentNode.appendChild(document.createElement("p"));
     // elementPi.textContent = "lfqllfweew";
   });
 });
