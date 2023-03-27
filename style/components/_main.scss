@@ -16,11 +16,12 @@
   justify-content: center;
   &__wrapper {
     height: 800px;
-    width: 1300px;
+    width: 100%;
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     // &:before {
     //   content: "";
     //   position: absolute;
@@ -48,9 +49,12 @@
     animation-duration: 0.8s;
     animation-name: drop-down;
     animation-direction: alternate;
+    object-fit: cover;
   }
 
   &__banner {
+    position: absolute;
+    left: 10%;
     li {
       padding: 10px;
       border-radius: 5px;
@@ -63,7 +67,7 @@
       background: rgba(67, 82, 128, 0.8);
       mix-blend-mode: normal;
       backdrop-filter: blur(10px);
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       transition: background-color 0.3s ease-in-out;
       color: #fff;
       animation-duration: 0.8s;
