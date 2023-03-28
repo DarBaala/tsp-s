@@ -105,8 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.addEventListener("mouseenter", (e) => {
         let currentLi = e.currentTarget;
         let p = currentLi.querySelector("p");
-        let span = currentLi.querySelector("span");
-        console.log(p, span);
         anime({
           targets: currentLi,
           p,
