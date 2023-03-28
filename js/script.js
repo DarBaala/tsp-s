@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar = document.getElementById("navbar"),
     mobileNav = document.getElementById("header__hidden-menu"),
     headerLi = document.querySelectorAll(".header__bottom-li"),
-    headerExtra = document.querySelectorAll(".header__hidden-menu-extra"),
-    paramsString = document.location.pathname,
-    screenWidth = window.screen.width;
+    headerExtra = document.querySelectorAll(".header__hidden-menu-extra");
 
   headerLi.forEach((el) => {
     el.addEventListener("mouseover", (e) => {
@@ -61,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const sticky = navbar.offsetTop;
 
   const scrollingOn = () => {
-    console.log(window.pageYOffset);
     if (window.pageYOffset >= sticky) {
       navbar.classList.add("header__bottom-sticky");
     } else if (window.pageYOffset === 0) {
@@ -87,11 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const paramsString = document.location.pathname;
+
   if (paramsString === "/") {
     const scrollAnimation = document.querySelector(".about-us__factory");
     let scrollAnimationOffset =
       scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 4;
-
     const handleScroll = () => {
       if (!scrollAnimation) {
         return;
@@ -106,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
     arrLi.forEach((el) => {
       el.addEventListener("mouseenter", (e) => {
+        const screenWidth = window.screen.width;
         let currentLi = e.currentTarget;
         let p = currentLi.querySelector("p");
         anime({

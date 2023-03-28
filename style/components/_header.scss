@@ -225,7 +225,6 @@
     display: flex;
     justify-content: space-between;
     padding: 0 35px;
-    background-color: #fff;
     @media (max-width: 960px) {
       display: none;
     }
@@ -284,6 +283,7 @@
         transform: translateY(0);
         visibility: visible;
         opacity: 1;
+        z-index: 1;
       }
       &-blocks {
         background-color: rgba(67, 82, 128, 0.9);
@@ -374,4 +374,5 @@
 }
 #navbar {
   background-color: #fff;
+  z-index: 5;
 }

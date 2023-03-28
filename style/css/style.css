@@ -357,8 +357,7 @@ p {
   .header__bottom {
     display: flex;
     justify-content: space-between;
-    padding: 0 35px;
-    background-color: #fff; }
+    padding: 0 35px; }
     @media (max-width: 960px) {
       .header__bottom {
         display: none; } }
@@ -408,7 +407,8 @@ p {
       .header__bottom-dropdown-active {
         transform: translateY(0);
         visibility: visible;
-        opacity: 1; }
+        opacity: 1;
+        z-index: 1; }
       .header__bottom-dropdown-blocks {
         background-color: rgba(67, 82, 128, 0.9);
         mix-blend-mode: normal;
@@ -478,7 +478,8 @@ p {
               font-size: 14px; } }
 
 #navbar {
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 5; }
 
 @media (max-width: 960px) {
   .main {
