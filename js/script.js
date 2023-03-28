@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar = document.getElementById("navbar"),
     mobileNav = document.getElementById("header__hidden-menu"),
     headerLi = document.querySelectorAll(".header__bottom-li"),
-    headerExtra = document.querySelectorAll(".header__hidden-menu-extra");
+    headerExtra = document.querySelectorAll(".header__hidden-menu-extra"),
+    paramsString = document.location.pathname,
+    screenWidth = window.screen.width;
 
   headerLi.forEach((el) => {
     el.addEventListener("mouseover", (e) => {
@@ -59,8 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sticky = navbar.offsetTop;
 
   const scrollingOn = () => {
+    console.log(window.pageYOffset);
     if (window.pageYOffset >= sticky) {
       navbar.classList.add("header__bottom-sticky");
+    } else if (window.pageYOffset === 0) {
+      navbar.classList.remove("header__bottom-sticky");
     } else {
       navbar.classList.remove("header__bottom-sticky");
     }
@@ -82,12 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const paramsString = document.location.pathname;
-
   if (paramsString === "/") {
     const scrollAnimation = document.querySelector(".about-us__factory");
     let scrollAnimationOffset =
-      scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
+      scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 4;
 
     const handleScroll = () => {
       if (!scrollAnimation) {
@@ -108,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         anime({
           targets: currentLi,
           p,
-          translateX: 50,
+          translateX: screenWidth < 620 ? 20 : 50,
         });
         const div = document.querySelector(".video__drop-block");
         setTimeout(() => {
@@ -125,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentLi = e.currentTarget;
         let p = currentLi.querySelector("p");
         const div = document.querySelector(".video__drop-block");
-
         setTimeout(() => {
           anime({
             targets: currentLi,
