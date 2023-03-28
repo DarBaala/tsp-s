@@ -177,8 +177,15 @@ p {
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 0;
-    height: 100rem; }
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translateX(-200px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+    @media (max-width: 960px) {
+      .header__hidden-menu {
+        display: flex; } }
     .header__hidden-menu li {
       margin-bottom: 10px; }
       .header__hidden-menu li a {
@@ -198,29 +205,38 @@ p {
         text-align: center; }
         .header__hidden-menu li ul li:last-child {
           margin-bottom: 0; }
+    .header__hidden-menu-active {
+      height: 100rem;
+      width: auto;
+      padding: 20px 0 0;
+      opacity: 1;
+      transform: translateX(0);
+      visibility: visible; }
     .header__hidden-menu-extra {
       display: flex;
       flex-direction: column;
       align-items: center; }
+      .header__hidden-menu-extra a {
+        color: #fff !important; }
     .header__hidden-menu-extra-wrapper {
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      padding: 12px;
+      padding: 0;
       overflow: hidden;
       height: 0;
       opacity: 0;
       visibility: hidden;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
+      transform: translateY(-30px);
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
       .header__hidden-menu-extra-wrapper li {
         margin-bottom: 5px; }
-        .header__hidden-menu-extra-wrapper li a {
-          font-size: 14px; }
       .header__hidden-menu-extra-wrapper-active {
+        transform: translateY(0);
+        height: 100%;
+        padding: 12px;
         opacity: 1;
         visibility: visible; }
-    .header__hidden-menu-active {
-      display: flex; }
   .header__burger {
     display: none;
     position: relative;
@@ -1020,7 +1036,7 @@ p {
   padding: 50px 20px; }
   @media (max-width: 960px) {
     .products {
-      margin-top: 20px !important;
+      margin-top: 135px !important;
       padding: 0 20px; } }
   .products h2 {
     font-size: 34px;

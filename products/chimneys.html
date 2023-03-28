@@ -10,8 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="../style/css/style.css" />
 
     <title>Дымовые трубы — Теплостройпроект-с</title>
@@ -22,23 +21,102 @@
         <div class="header__top-wrapper container">
           <ul id="header__hidden-menu" class="header__hidden-menu">
             <li><a href="/">Главная</a></li>
-            <li><a href="">Наши направления</a></li>
-            <li><a href="">Продукция</a></li>
-            <li><a href="">Услуги</a></li>
-            <li><a href="">Завод</a></li>
+            <li><a href="../direction/index.html">Наши направления</a></li>
+            <li class="header__hidden-menu-extra">
+              <a
+                >Продукция
+                <svg
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 192">
+                  <polygon
+                    points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0" />
+                </svg>
+              </a>
+              <ul class="header__hidden-menu-extra-wrapper">
+                <li><a href="../products/boiler-room.html">Котельные</a></li>
+                <li><a href="../products/boilers.html">Котлы</a></li>
+                <li>
+                  <a href="../products/hangar.html">Ангары и металлоконструкции</a>
+                </li>
+                <li><a href="../products/reservoirs.html">Резервуары</a></li>
+                <li>
+                  <a href="../products/gas-fired-power-plant.html">Газовые электростанции</a>
+                </li>
+                <li>
+                  <a href="../products/thermal-points.html">Тепловые пункты</a>
+                </li>
+                <li>
+                  <a href="../products/heat-exchangers.html">Теплообменники</a>
+                </li>
+                <li>
+                  <a href="../products/trigeneration.html">Тригенерация</a>
+                </li>
+                <li><a href="../products/recyclers.html">Утилизаторы</a></li>
+                <li><a href="../products/air-ducts.html">Воздуховоды </a></li>
+                <li><a href="../products/chimneys.html">Дымовые трубы</a></li>
+                <li><a href="../products/chillers.html">Чиллеры</a></li>
+                <li>
+                  <a href="../products/houses.html">Блочно-модульные дома</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__hidden-menu-extra">
+              <a
+                >Услуги
+                <svg
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 192">
+                  <polygon
+                    points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0" />
+                </svg>
+              </a>
+              <ul class="header__hidden-menu-extra-wrapper">
+                <li><a href="../services/for-planner.html">Проектировщикам</a></li>
+                <li><a href="../services/production-technical.html">ПТО</a></li>
+                <li><a href="">Проектирование</a></li>
+                <li>
+                  <a href="../services/construction-installation.html">СМУ</a>
+                </li>
+                <li>
+                  <a href="../services/warranty-service.html">Гарантия и сервис</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__hidden-menu-extra">
+              <a
+                >Завод
+                <svg
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 192">
+                  <polygon
+                    points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0" />
+                </svg>
+              </a>
+              <ul class="header__hidden-menu-extra-wrapper">
+                <ul>
+                  <li><a href="">Документация</a></li>
+                  <li><a href="">3D туры по производству</a></li>
+                  <li><a href="">Награды</a></li>
+                </ul>
+                <ul>
+                  <li><a href="">Отзывы и благодарственные письма</a></li>
+                  <li><a href="">Наши партнеры</a></li>
+                  <li><a href="">История завода</a></li>
+                </ul>
+              </ul>
+            </li>
             <li><a href="">Объекты </a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="../contacts.html">Контакты</a></li>
           </ul>
           <div class="header__box">
-            <a href="/">
-              <img
-                class="header__logo"
-                src="../img/logo.svg"
-                alt="Logo: RIMGROUP"
-            /></a>
-            <div id="burger" class="header__burger">
-              <span></span><span></span><span></span>
-            </div>
+            <a href="/"> <img class="header__logo" src="../img/logo.svg" alt="Logo: RIMGROUP" /></a>
+            <div id="burger" class="header__burger"><span></span><span></span><span></span></div>
           </div>
           <div class="header__contacts">
             <a href="mailto:INFO@RIMGROUP.RU">INFO@RIMGROUP.RU</a
@@ -48,8 +126,12 @@
       </div>
       <nav id="navbar">
         <ul class="header__bottom container">
-          <li class="header__bottom-li"><a href="/">Главная</a></li>
-          <li class="header__bottom-li"><a href="">Наши направления</a></li>
+          <li class="header__bottom-li">
+            <a href="/">Главная</a>
+          </li>
+          <li class="header__bottom-li">
+            <a href="../direction">Наши направления</a>
+          </li>
           <li class="header__bottom-li">
             <a style="color: #e2752b" class="header__bottom-link"
               >Продукция
@@ -57,12 +139,10 @@
                 id="Layer_1"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 320 192"
-              >
+                viewBox="0 0 320 192">
                 <polygon
                   fill="#e2752b"
-                  points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0"
-                />
+                  points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0" />
               </svg>
             </a>
             <ul class="header__bottom-dropdown">
@@ -71,27 +151,19 @@
                   <li><a href="../products/boiler-room.html">КОТЕЛЬНЫЕ</a></li>
                   <li><a href="../products/boilers.html">КОТЛЫ</a></li>
                   <li>
-                    <a href="../products/hangar.html"
-                      >АНГАРЫ И МЕТАЛЛОКОНСТРУКЦИИ</a
-                    >
+                    <a href="../products/hangar.html">АНГАРЫ И МЕТАЛЛОКОНСТРУКЦИИ</a>
                   </li>
                   <li><a href="../products/reservoirs.html">РЕЗЕРВУАРЫ</a></li>
                 </ul>
                 <ul>
                   <li>
-                    <a href="../products/gas-fired-power-plant.html"
-                      >ГАЗОВЫЕ ЭЛЕКТРОСТАНЦИИ</a
-                    >
+                    <a href="../products/gas-fired-power-plant.html">ГАЗОВЫЕ ЭЛЕКТРОСТАНЦИИ</a>
                   </li>
                   <li>
-                    <a href="../products/thermal-points.html"
-                      >ТЕПЛОВЫЕ ПУНКТЫ</a
-                    >
+                    <a href="../products/thermal-points.html">ТЕПЛОВЫЕ ПУНКТЫ</a>
                   </li>
                   <li>
-                    <a href="../products/heat-exchangers.html"
-                      >ТЕПЛООБМЕННИКИ</a
-                    >
+                    <a href="../products/heat-exchangers.html">ТЕПЛООБМЕННИКИ</a>
                   </li>
                   <li>
                     <a href="../products/trigeneration.html">ТРИГЕНЕРАЦИЯ</a>
@@ -100,9 +172,7 @@
                 <ul>
                   <li><a href="../products/recyclers.html">УТИЛИЗАТОРЫ</a></li>
                   <li><a href="../products/air-ducts.html">ВОЗДУХОВОДЫ </a></li>
-                  <li>
-                    <a href="../products/chimneys.html"> ДЫМОВЫЕ ТРУБЫ</a>
-                  </li>
+                  <li><a href="../products/chimneys.html">ДЫМОВЫЕ ТРУБЫ</a></li>
                   <li><a href="../products/chillers.html">ЧИЛЛЕРЫ</a></li>
                 </ul>
                 <ul>
@@ -120,11 +190,9 @@
                 id="Layer_1"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 320 192"
-              >
+                viewBox="0 0 320 192">
                 <polygon
-                  points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0"
-                />
+                  points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0" />
               </svg>
             </a>
             <ul class="header__bottom-dropdown">
@@ -133,21 +201,15 @@
                   <li>
                     <a href="../services/for-planner.html">ПРОЕКТИРОВЩИКАМ</a>
                   </li>
-                  <li>
-                    <a href="../services/production-technical.html">ПТО</a>
-                  </li>
-                  <li>
-                    <a href="../services/planning.html">ПРОЕКТИРОВАНИЕ</a>
-                  </li>
+                  <li><a href="../services/production-technical.html">ПТО</a></li>
+                  <li><a href="../services/planning.html">ПРОЕКТИРОВАНИЕ</a></li>
                 </ul>
                 <ul>
                   <li>
                     <a href="../services/construction-installation.html">СМУ</a>
                   </li>
                   <li>
-                    <a href="../services/warranty-service.html"
-                      >ГАРАНТИЯ И СЕРВИС</a
-                    >
+                    <a href="../services/warranty-service.html">ГАРАНТИЯ И СЕРВИС</a>
                   </li>
                 </ul>
               </li>
@@ -160,43 +222,31 @@
                 id="Layer_1"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 320 192"
-              >
+                viewBox="0 0 320 192">
                 <polygon
-                  points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0"
-                />
+                  points="287.6 0 320 32.3 160 192 160 192 160 192 0 32.3 32.4 0 160 127.3 287.6 0" />
               </svg>
             </a>
             <ul class="header__bottom-dropdown">
               <li class="header__bottom-dropdown-blocks">
                 <ul>
-                  <li><a href="">ДОКУМЕНТАЦИЯ</a></li>
-                  <li><a href="">3D ТУРЫ ПО ПРОИЗВОДСТВУ</a></li>
-                  <li><a href="">НАГРАДЫ</a></li>
+                  <li><a href="../">ДОКУМЕНТАЦИЯ</a></li>
+                  <li><a href="../">3D ТУРЫ ПО ПРОИЗВОДСТВУ</a></li>
+                  <li><a href="../">НАГРАДЫ</a></li>
                 </ul>
                 <ul>
-                  <li><a href="">ОТЗЫВЫ И БЛАГОДАРСТВЕННЫЕ ПИСЬМА</a></li>
-                  <li><a href="">НАШИ ПАРТНЕРЫ</a></li>
-                  <li><a href="">ИСТОРИЯ ЗАВОДА</a></li>
+                  <li><a href="../">ОТЗЫВЫ И БЛАГОДАРСТВЕННЫЕ ПИСЬМА</a></li>
+                  <li><a href="../">НАШИ ПАРТНЕРЫ</a></li>
+                  <li><a href="../">ИСТОРИЯ ЗАВОДА</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li class="header__bottom-li"><a href="">Объекты</a></li>
+          <li class="header__bottom-li"><a href="../">Объекты</a></li>
           <li class="header__bottom-li">
-            <a href="../contacts.html">Контакты</a>
+            <a href="..//contacts.html">Контакты</a>
           </li>
         </ul>
-      </nav>
-      <nav aria-label="breadcrumb" class="header__breadcrumb">
-        <ol class="container header__breadcrumb-wrapper">
-          <li class="header__breadcrumb-item">
-            <a href="/index.html">Главная</a>
-          </li>
-          <li class="header__breadcrumb-item active" aria-current="page">
-            Дымовые трубы
-          </li>
-        </ol>
       </nav>
     </header>
     <div class="products container">
@@ -209,10 +259,9 @@
             <p class="card-text">
               Максимальное количество стволов - <span>1</span> <br />
               Максимальный диаметр ствола - <span>600 мм</span> <br />
-              Состоят из основной рамы и нескольких стволов для газоотведения.
-              Газоотвод обычно имеет несколько модулей, которые производятся из
-              «нержавейки», причем толщину стали и ее марку подбирают в
-              зависимости от температуры дыма и его состава.
+              Состоят из основной рамы и нескольких стволов для газоотведения. Газоотвод обычно
+              имеет несколько модулей, которые производятся из «нержавейки», причем толщину стали и
+              ее марку подбирают в зависимости от температуры дыма и его состава.
             </p>
           </div>
         </div>
@@ -224,9 +273,8 @@
               Максимальное количество стволов - <span>5</span> <br />
               Максимальный диаметр ствола - <span>1500 (3500х1) мм</span> <br />
               Максимальная высота - <span>60 м</span><br />
-              Колонная дымовая труба представляет собой конструкцию из
-              металлической несущей наружной обечайки и газоотводящих стволов,
-              расположенных внутри конструкции.
+              Колонная дымовая труба представляет собой конструкцию из металлической несущей
+              наружной обечайки и газоотводящих стволов, расположенных внутри конструкции.
             </p>
           </div>
         </div>
@@ -238,9 +286,8 @@
               Максимальное количество стволов - <span>4</span> <br />
               Максимальный диаметр ствола - <span>600 мм</span> <br />
               Максимальная высота - <span>36 м</span> <br />
-              Мачтовая дымовая труба – самонесущая стальная конструкция,
-              состоящая из сварной фермы и прикрепленных к ней вертикальных
-              газоходов.
+              Мачтовая дымовая труба – самонесущая стальная конструкция, состоящая из сварной фермы
+              и прикрепленных к ней вертикальных газоходов.
             </p>
           </div>
         </div>
@@ -252,9 +299,8 @@
               Максимальное количество стволов - <span>6</span> <br />
               Максимальный диаметр ствола – <span>1500мм</span> <br />
               Максимальная высота - <span>50 м</span> <br />
-              представляет собой систему, содержащую от одного до шести дым
-              отводящих стволов различного диаметра, которые размещаются на
-              несущей конструкции.
+              представляет собой систему, содержащую от одного до шести дым отводящих стволов
+              различного диаметра, которые размещаются на несущей конструкции.
             </p>
           </div>
         </div>
@@ -266,9 +312,8 @@
               Максимальное количество стволов - <span>1</span> <br />
               Максимальный диаметр ствола - <span>по расчету</span> <br />
               Максимальная высота - <span>по расчету</span> <br />
-              Основными преимуществами дымовых труб на растяжках являются
-              возможность сборки на месте эксплуатации и простота их монтажа, а
-              также низкая металлоемкость
+              Основными преимуществами дымовых труб на растяжках являются возможность сборки на
+              месте эксплуатации и простота их монтажа, а также низкая металлоемкость
             </p>
           </div>
         </div>

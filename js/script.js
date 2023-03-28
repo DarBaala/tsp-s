@@ -23,13 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         currentLi
           .querySelector(".header__bottom-dropdown")
           .classList.add("header__bottom-dropdown-active");
-        let div = currentLi.querySelector(".header__bottom-dropdown-active");
-        anime({
-          targets: div,
-
-          easing: "easeOutElastic(1, .8)",
-          loop: true,
-        });
       }
     });
     el.addEventListener("mouseleave", (e) => {
@@ -89,78 +82,64 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const scrollAnimation = document.querySelector(".about-us__factory");
-  const scrollAnimationOffset =
-    scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
+  const paramsString = document.location.pathname;
 
-  const handleScroll = () => {
-    if (window.pageYOffset > scrollAnimationOffset) {
-      scrollAnimation.classList.add("about-us__factory-active");
-    }
-  };
+  if (paramsString === "/") {
+    const scrollAnimation = document.querySelector(".about-us__factory");
+    let scrollAnimationOffset =
+      scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
 
-  console.log(scrollAnimationOffset, scrollAnimation);
+    const handleScroll = () => {
+      if (!scrollAnimation) {
+        return;
+      }
+      if (window.pageYOffset > scrollAnimationOffset) {
+        scrollAnimation.classList.add("about-us__factory-active");
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
-  console.log(arrLi);
-
-  arrLi.forEach((el) => {
-    el.addEventListener("mouseenter", (e) => {
-      let currentLi = e.currentTarget;
-      let p = currentLi.querySelector("p");
-      let span = currentLi.querySelector("span");
-      console.log(p, span);
-      anime({
-        targets: currentLi,
-        p,
-        translateX: 50,
-      });
-      const div = document.querySelector(".video__drop-block");
-      setTimeout(() => {
-        anime({
-          targets: div,
-          translateX: +20,
-        });
-      }, 400);
-      // setTimeout(() => {
-      //   if (document.querySelector(".video__wrapper").querySelector(".video__drop-block")) {
-      //     const div = document.querySelector(".video__drop-block");
-      //     div.remove();
-      //     const wrapper = document.createElement("div");
-      //     wrapper.classList.add("video__drop-block");
-      //     const myDiv = document.querySelector(".video__wrapper");
-      //     myDiv.appendChild(wrapper);
-      //   } else {
-      //     const wrapper = document.createElement("div");
-      //     wrapper.classList.add("video__drop-block");
-      //     const myDiv = document.querySelector(".video__wrapper");
-      //     myDiv.appendChild(wrapper);
-      //   }
-      // }, 300);
-      // const elementPi = currentLi.parentNode.appendChild(document.createElement("p"));
-      // elementPi.textContent = "lfqllfweew";
-    });
-  });
-
-  arrLi.forEach((el) => {
-    el.addEventListener("mouseleave", (e) => {
-      let currentLi = e.currentTarget;
-      let p = currentLi.querySelector("p");
-      const div = document.querySelector(".video__drop-block");
-
-      setTimeout(() => {
+    const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
+    arrLi.forEach((el) => {
+      el.addEventListener("mouseenter", (e) => {
+        let currentLi = e.currentTarget;
+        let p = currentLi.querySelector("p");
+        let span = currentLi.querySelector("span");
+        console.log(p, span);
         anime({
           targets: currentLi,
           p,
-          translateX: 0,
+          translateX: 50,
         });
-        anime({
-          targets: div,
-          translateX: 0,
-        });
-      }, 200);
+        const div = document.querySelector(".video__drop-block");
+        setTimeout(() => {
+          anime({
+            targets: div,
+            translateX: +20,
+          });
+        }, 400);
+      });
     });
-  });
+
+    arrLi.forEach((el) => {
+      el.addEventListener("mouseleave", (e) => {
+        let currentLi = e.currentTarget;
+        let p = currentLi.querySelector("p");
+        const div = document.querySelector(".video__drop-block");
+
+        setTimeout(() => {
+          anime({
+            targets: currentLi,
+            p,
+            translateX: 0,
+          });
+          anime({
+            targets: div,
+            translateX: 0,
+          });
+        }, 200);
+      });
+    });
+  }
 });
