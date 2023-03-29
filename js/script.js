@@ -94,7 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!scrollAnimation) {
         return;
       }
-      if (window.pageYOffset > scrollAnimationOffset) {
+      console.log("window.pageYOffset", window.pageYOffset);
+      console.log("scrollAnimationOffset", scrollAnimationOffset);
+      if (window.pageYOffset > scrollAnimationOffset - 210) {
         scrollAnimation.classList.add("about-us__factory-active");
       }
     };
