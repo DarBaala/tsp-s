@@ -34,11 +34,16 @@
     //   }
     // }
   }
-  &__img {
+  &__file {
     width: 100%;
     height: 800px;
     object-fit: cover;
   }
+  // &__img {
+  //   width: 100%;
+  //   height: 800px;
+  //   object-fit: cover;
+  // }
   &__drop-block {
     width: 62%;
     height: 92%;
