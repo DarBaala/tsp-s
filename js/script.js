@@ -85,11 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const paramsString = document.location.pathname;
-
-  if (paramsString === "/") {
+  console.log(paramsString);
+  if (paramsString === "/" || paramsString === "/index.html") {
     const scrollAnimation = document.querySelector(".about-us__factory");
     let scrollAnimationOffset =
-      scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 4;
+      scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
     const handleScroll = () => {
       if (!scrollAnimation) {
         return;

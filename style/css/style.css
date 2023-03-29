@@ -575,7 +575,8 @@ p {
         transition: transform 0.5s ease-in-out; }
         @media (max-width: 960px) {
           .video__banner li span {
-            font-size: 12px; } }
+            font-size: 12px;
+            width: 200px; } }
       .video__banner li br {
         content: "A" !important;
         display: block !important;
