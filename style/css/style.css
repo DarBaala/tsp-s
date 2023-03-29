@@ -582,6 +582,9 @@ p {
         margin-top: 5px;
         margin-bottom: 5px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.315); }
+      .video__banner li a {
+        display: flex;
+        align-items: center; }
       @media (max-width: 960px) {
         .video__banner li {
           width: 300px; } }
