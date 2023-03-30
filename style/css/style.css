@@ -851,7 +851,7 @@ p {
           width: 400px; } }
       @media (max-width: 960px) {
         .about-us__blocks div {
-          width: 350px; } }
+          width: 300px; } }
       .about-us__blocks div h3 {
         font-family: "Roboto";
         font-style: normal;

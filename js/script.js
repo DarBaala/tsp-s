@@ -146,6 +146,10 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: {
       delay: 5000,
     },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
