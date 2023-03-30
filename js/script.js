@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const paramsString = document.location.pathname;
-  console.log(paramsString);
   if (paramsString === "/" || paramsString === "/index.html") {
     const scrollAnimation = document.querySelector(".about-us__factory");
     let scrollAnimationOffset =
@@ -94,8 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!scrollAnimation) {
         return;
       }
-      console.log("window.pageYOffset", window.pageYOffset);
-      console.log("scrollAnimationOffset", scrollAnimationOffset);
       if (window.pageYOffset > scrollAnimationOffset - 210) {
         scrollAnimation.classList.add("about-us__factory-active");
       }
