@@ -1150,6 +1150,9 @@ p {
     color: #435280;
     font-style: normal;
     margin-bottom: 20px; }
+    @media (max-width: 960px) {
+      .products h2 {
+        font-size: 24px; } }
   .products__wrapper {
     display: flex;
     flex-wrap: wrap; }
@@ -1222,6 +1225,13 @@ p {
         line-height: 110%; }
       .products__description div h3 {
         font-size: 16px; }
+    .products__description-factory {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      .products__description-factory img {
+        padding: 10px;
+        width: 200px; }
     .products__description-boilers h3 {
       margin-bottom: 15px;
       font-style: normal;

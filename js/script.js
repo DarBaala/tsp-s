@@ -140,23 +140,25 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    loop: true,
-    autoplay: {
-      delay: 5000,
-    },
-    // effect: "fade",
-    // fadeEffect: {
-    //   crossFade: true,
-    // },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  if (
+    paramsString === "/" ||
+    paramsString === "/services/production-technical.html" ||
+    paramsString === "/index.html"
+  ) {
+    const swiper = new Swiper(".swiper", {
+      direction: "horizontal",
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
 });
