@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Контакты" />
+    <meta name="description" content="Объекты" />
     <link rel="icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="style/css/style.css" />
-    <title>Контакты — Теплостройпроект-с</title>
+    <link rel="stylesheet" href="/style/css/swiper-bundle.min.css" />
+    <title>Объекты — Теплостройпроект-с</title>
   </head>
   <body>
     <header class="header">
@@ -235,32 +236,149 @@
               </li>
             </ul>
           </li>
-          <li class="header__bottom-li"><a href="">Объекты</a></li>
           <li class="header__bottom-li">
-            <a style="color: #e2752b" href="/contacts.html">Контакты</a>
+            <a style="color: #e2752b" href="./built-objects.html">Объекты</a>
+          </li>
+          <li class="header__bottom-li">
+            <a href="/contacts.html">Контакты</a>
           </li>
         </ul>
       </nav>
+      <nav aria-label="breadcrumb" class="header__breadcrumb">
+        <ol class="container header__breadcrumb-wrapper">
+          <li class="header__breadcrumb-item">
+            <a href="/index.html">Главная</a>
+          </li>
+          <li class="header__breadcrumb-item active" aria-current="page">Объекты</li>
+        </ol>
+      </nav>
     </header>
-    <div class="contacts">
-      <div class="contacts__wrapper container">
-        <h2>Контакты</h2>
-        <div class="contacts__items">
-          <div>
-            <h3>Телефон</h3>
-            <a href="tel:88003339383">8 800 333 93 83</a>
+    <div class="about-us__facility container">
+      <h2>Выполненные объекты</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a
+              href="https://rimgroup.ru/production/building/completed_objects/modulnyy-dom-na-karbonovom-poligone">
+              <img src="img/facility/1.jpg" alt="МОДУЛЬНЫЙ ДОМ НА КАРБОНОВОМ ПОЛИГОНЕ" />
+              <div>
+                <h3>МОДУЛЬНЫЙ ДОМ НА КАРБОНОВОМ ПОЛИГОНЕ</h3>
+                <p>Первый в Чечне «Кампус Карбонового полигона» на базе ГГНТУ им.Миллионщикова.</p>
+              </div>
+            </a>
           </div>
-          <div>
-            <h3>Почта</h3>
-            <a href="mailto:INFO@RIMGROUP.RU">INFO@RIMGROUP.RU</a>
+          <div class="swiper-slide">
+            <a href="https://rimgroup.ru/production/building/completed_objects/trk-groznyy-moll">
+              <img src="img/facility/2.jpg" alt="ТРК «Грозный Молл»" />
+              <div>
+                <h3>ТРК «Грозный Молл»</h3>
+                <p>г. Грозный, 3600 тонн металлоконструкций</p>
+              </div>
+            </a>
           </div>
-          <div>
-            <h3>Адрес</h3>
-            <a href="https://goo.gl/maps/hUE3Qp4AJFPS4P1H6">ул. Гайрбекова, 1, село Валерик </a>
+          <div class="swiper-slide">
+            <a
+              href="https://rimgroup.ru/production/building/completed_objects/bashnya-ggntu-im-akademika-millionshchikova">
+              <img src="img/facility/3.jpg" alt="Башня ГГНТУ им. академика Миллионщикова" />
+              <div>
+                <h3>Башня ГГНТУ им. академика Миллионщикова</h3>
+                <p>г. Грозный, 100 тонн металлоконструкций</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://rimgroup.ru/production/building/completed_objects/mfk-minutka">
+              <img loading="lazy" src="img/facility/4.jpg" alt="МФК «Минутка»" />
+              <div class="swiper-lazy-preloader"></div>
+              <div>
+                <h3>МФК «Минутка»</h3>
+                <p>г. Грозный, 455 тонн металлоконструкций</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://rimgroup.ru/production/building/completed_objects/mostovoy-perekhod">
+              <img loading="lazy" src="img/facility/5.jpg" alt="Мостовой переход" />
+              <div class="swiper-lazy-preloader"></div>
+              <div>
+                <h3>Мостовой переход</h3>
+                <p>г. Грозный, 1500 тонн металлоконструкций</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://rimgroup.ru/production/building/completed_objects/lestnitsa-v-nebo">
+              <img loading="lazy" src="img/facility/6.jpg" alt="Лестница в небо" />
+              <div class="swiper-lazy-preloader"></div>
+              <div>
+                <h3>Лестница в небо</h3>
+                <p>г. Грозный, 40 тонн металлоконструкций</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://rimgroup.ru/production/building/completed_objects/lestnitsa-v-nebo">
+              <img loading="lazy" src="img/facility/7.jpg" alt="Железнодорожный вокзал" />
+              <div class="swiper-lazy-preloader"></div>
+              <div>
+                <h3>Железнодорожный вокзал</h3>
+                <p>г. Гудермес, 810 тонн металлоконструкций</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a
+              href="https://rimgroup.ru/production/building/completed_objects/voleybolnyy-dvorets-im-a-ukhtaeva">
+              <img
+                loading="lazy"
+                src="img/facility/8.jpg"
+                alt="Волейбольный дворец им. А. Ухтаева" />
+              <div class="swiper-lazy-preloader"></div>
+              <div>
+                <h3>Волейбольный дворец им. А. Ухтаева</h3>
+                <p>г. Грозный, 810 тонн металлоконструкций</p>
+              </div>
+            </a>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev">
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 192 320">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <polygon
+              class="cls-1"
+              points="192 19.4 171.3 0 0 160 171.3 320 192 300.7 41.5 160 192 19.4" />
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 192 320">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <polygon
+              class="cls-1"
+              points="0 300.6 20.7 320 192 160 20.7 0 0 19.3 150.5 160 0 300.6" />
+          </svg>
+        </div>
       </div>
-      <div id="map"></div>
     </div>
     <footer class="footer">
       <div class="container">
@@ -296,18 +414,6 @@
       </div>
     </footer>
   </body>
-  <script
-    src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
-    type="text/javascript"></script>
-  <script type="text/javascript">
-    ymaps.ready(init);
-    function init() {
-      var myMap = new ymaps.Map("map", {
-        center: [43.178076, 45.390425],
-        zoom: 17,
-        controls: [],
-      });
-    }
-  </script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </html>
