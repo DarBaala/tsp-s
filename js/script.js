@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (
     paramsString === "/" ||
-    paramsString === "/services/production-technical.html" ||
+    paramsString === "/built-objects.html" ||
     paramsString === "/index.html"
   ) {
     const swiper = new Swiper(".swiper", {
