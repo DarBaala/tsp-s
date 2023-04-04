@@ -1,5 +1,13 @@
 .about-us {
   padding: 35px 10px;
+  &__text {
+    h1 {
+      font-weight: 400;
+      font-size: 20px;
+      color: #fff;
+      line-height: 24px;
+    }
+  }
   &__description {
     margin-bottom: 35px;
     h2 {
@@ -9,7 +17,6 @@
       font-style: normal;
       margin-bottom: 50px;
     }
-
     p {
       max-width: 1120px;
       font-size: 18px;
@@ -31,7 +38,7 @@
     }
   }
   &__factory {
-    background-color: rgba(67, 82, 128, 0.8);
+    background-color: rgb(67, 82, 128, 1);
     opacity: 0;
     transform: translateX(-80%);
     transition: transform 0.5s ease-in-out;

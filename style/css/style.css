@@ -767,6 +767,11 @@ p {
 
 .about-us {
   padding: 35px 10px; }
+  .about-us__text h1 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    line-height: 24px; }
   .about-us__description {
     margin-bottom: 35px; }
     .about-us__description h2 {
@@ -792,7 +797,7 @@ p {
         .about-us__description img {
           width: 360px; } }
   .about-us__factory {
-    background-color: rgba(67, 82, 128, 0.8);
+    background-color: #435280;
     opacity: 0;
     transform: translateX(-80%);
     transition: transform 0.5s ease-in-out; }
