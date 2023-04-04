@@ -784,7 +784,8 @@ p {
       max-width: 1120px;
       font-size: 18px; }
       .about-us__description p span {
-        color: #e2752b; }
+        color: #e2752b;
+        font-weight: 500; }
     .about-us__description img {
       object-fit: contain;
       width: 1120px;
