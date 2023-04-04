@@ -70,7 +70,7 @@
       width: 400px;
       height: 115px;
       max-width: 100%;
-      background: rgba(67, 82, 128, 0.8);
+      background: rgba(251, 113, 4, 0.7);
       mix-blend-mode: normal;
       backdrop-filter: blur(10px);
       margin-bottom: 8px;
@@ -83,10 +83,10 @@
         margin-bottom: 0;
       }
       &:hover {
-        background-color: rgba(226, 117, 43, 0.8);
+        background-color: rgba(67, 82, 128, 0.808);
         p {
           transform: translateX(320px);
-          color: $blue;
+          color: #fff;
           @media (max-width: 960px) {
             transform: translateX(240px);
           }
