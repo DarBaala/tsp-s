@@ -9,6 +9,7 @@
       font-style: normal;
       margin-bottom: 50px;
     }
+
     p {
       max-width: 1120px;
       font-size: 18px;
@@ -143,6 +144,13 @@
   &__facility {
     padding: 50px 10px;
     h2 {
+      font-size: 34px;
+      font-weight: 700;
+      color: $blue;
+      font-style: normal;
+      margin-bottom: 50px;
+    }
+    h1 {
       font-size: 34px;
       font-weight: 700;
       color: $blue;
