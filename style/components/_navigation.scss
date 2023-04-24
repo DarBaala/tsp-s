@@ -1,0 +1,20 @@
+.navigation {
+  background-color: $orange;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    a {
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 40px;
+      }
+    }
+  }
+  @media (max-width: 960px) {
+    display: none;
+  }
+}

@@ -1462,7 +1462,7 @@ p {
     height: 450px; } }
 
 .boilers {
-  padding: 50px 20px; }
+  padding: 50px 20px 20px; }
   @media (max-width: 960px) {
     .boilers {
       margin-top: 25px !important;
@@ -1555,6 +1555,52 @@ p {
       @media (max-width: 960px) {
         .boilers__table-wrapper {
           width: 330px; } }
+
+.navigation {
+  background-color: #e2752b; }
+  .navigation__wrapper {
+    display: flex;
+    align-items: center; }
+    .navigation__wrapper a {
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .navigation__wrapper a img {
+        height: 40px; }
+  @media (max-width: 960px) {
+    .navigation {
+      display: none; } }
+
+.call-us {
+  padding: 20px 0; }
+  .call-us h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #435280;
+    font-style: normal; }
+  .call-us__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 460px; }
+    .call-us__form input {
+      margin-bottom: 15px;
+      padding: 15px;
+      border: solid 2px #e2752b;
+      font-size: 16px;
+      outline: none; }
+      .call-us__form input::placeholder {
+        font-size: 16px; }
+    .call-us__form button {
+      max-width: 250px;
+      background-color: #435280;
+      padding: 15px;
+      border: none;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer; }
 
 html {
   box-sizing: border-box; }
