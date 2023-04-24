@@ -528,7 +528,7 @@ p {
       display: flex;
       align-items: center;
       cursor: pointer;
-      width: 400px;
+      width: 420px;
       height: 115px;
       max-width: 100%;
       background: rgba(251, 113, 4, 0.7);
@@ -589,7 +589,7 @@ p {
         align-items: center; }
       @media (max-width: 960px) {
         .video__banner li {
-          width: 300px; } }
+          width: 320px; } }
     @media (max-width: 620px) {
       .video__banner {
         left: 3%; } }
@@ -991,6 +991,10 @@ p {
       background-color: #435280;
       border-color: transparent;
       box-shadow: none; }
+  .btn-primary svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff; }
 
 .cards {
   display: flex;
