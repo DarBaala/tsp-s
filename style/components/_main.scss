@@ -93,6 +93,7 @@
         }
         span {
           transform: translateX(-80px);
+          color: #fff;
           @media (max-width: 960px) {
             transform: translateX(-60px);
           }

@@ -106,7 +106,7 @@
       padding: 20px;
       width: 480px;
       max-width: 100%;
-      height: 80px;
+      height: 120px;
       background-color: $blue;
       margin-bottom: 15px;
       transition: transform 0.3s ease-in-out;
@@ -215,7 +215,8 @@
         width: 12px;
         background-color: $blue;
         cursor: pointer;
-        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
         &:hover {
           transform: scale(1.3);
           background-color: #435280 !important;
@@ -230,7 +231,8 @@
         padding: 10px;
         border-radius: 3px;
         background-color: $blue;
-        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out,
+          background-color 0.3s ease-in-out;
         svg {
           width: 20px;
         }
@@ -253,6 +255,31 @@
           background-color: $orange;
         }
       }
+    }
+  }
+}
+.btn-primary {
+  background-color: $blue;
+  border-color: transparent;
+  box-shadow: none;
+  &:focus {
+    background-color: $blue;
+    border-color: transparent;
+    box-shadow: none;
+  }
+  &:hover {
+    background-color: $blue;
+    border-color: transparent;
+    box-shadow: none;
+  }
+  &:active {
+    background-color: $blue;
+    border-color: transparent;
+    box-shadow: none;
+    &:focus {
+      background-color: $blue;
+      border-color: transparent;
+      box-shadow: none;
     }
   }
 }
