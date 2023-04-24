@@ -557,14 +557,14 @@ p {
             .video__banner li:hover span {
               transform: translateX(-60px); } }
       .video__banner li p {
-        font-size: 90px;
+        font-size: 80px;
         font-weight: 600;
         margin-right: 20px;
         margin-left: 20px;
         transition: color 0.3s ease-in-out, transform 0.5s ease-in-out; }
         @media (max-width: 960px) {
           .video__banner li p {
-            font-size: 72px;
+            font-size: 62px;
             margin-right: 15px;
             margin-left: 15px; } }
       .video__banner li span {
