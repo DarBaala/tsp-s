@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
       let currentLi = e.currentTarget;
       headerExtra.forEach((el) => {
         if (currentLi !== el) {
-          el.querySelector(".header__hidden-menu-extra-wrapper").classList.remove(
-            "header__hidden-menu-extra-wrapper-active"
-          );
+          el.querySelector(
+            ".header__hidden-menu-extra-wrapper"
+          ).classList.remove("header__hidden-menu-extra-wrapper-active");
         }
       });
       currentLi
@@ -88,7 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (paramsString === "/" || paramsString === "/index.html") {
     const scrollAnimation = document.querySelector(".about-us__factory");
     let scrollAnimationOffset =
-      scrollAnimation.offsetTop - window.innerHeight + scrollAnimation.offsetHeight / 2;
+      scrollAnimation.offsetTop -
+      window.innerHeight +
+      scrollAnimation.offsetHeight / 2;
     const handleScroll = () => {
       if (!scrollAnimation) {
         return;
@@ -100,7 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    const arrLi = document.querySelector(".video__banner").querySelectorAll("li");
+    const arrLi = document
+      .querySelector(".video__banner")
+      .querySelectorAll("li");
     arrLi.forEach((el) => {
       el.addEventListener("mouseenter", (e) => {
         const screenWidth = window.screen.width;
@@ -160,5 +164,30 @@ document.addEventListener("DOMContentLoaded", () => {
         prevEl: ".swiper-button-prev",
       },
     });
+  }
+
+  if (paramsString === "/") {
+    console.log(paramsString);
+    document.querySelector(".header__bottom-link__home").style.color =
+      "#e2752b";
+  }
+
+  if (paramsString.includes("products")) {
+    document.querySelector(".header__bottom-link_product").style.color =
+      "#e2752b";
+    document.querySelector(".header__bottom-link_product-poly").style.fill =
+      "#e2752b";
+  }
+  if (paramsString.includes("services")) {
+    document.querySelector(".header__bottom-link__services").style.color =
+      "#e2752b";
+    document.querySelector(".header__bottom-link__services-poly").style.fill =
+      "#e2752b";
+  }
+  if (paramsString.includes("factory")) {
+    document.querySelector(".header__bottom-link__factory").style.color =
+      "#e2752b";
+    document.querySelector(".header__bottom-link__factory-poly").style.fill =
+      "#e2752b";
   }
 });
